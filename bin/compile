@@ -1,0 +1,18 @@
+#!/bin/sh -eu
+#
+# bin/compile BUILD_DIR CACHE_DIR ENV_DIR
+
+BUILD_DIR=${1:-}
+
+QGTUNNEL_FILENAME=qgtunnel-latest.tar.gz
+QGTUNNEL_URL="https://s3.amazonaws.com/quotaguard/$QGTUNNEL_FILENAME"
+
+echo "    -> Downloading qgtunnel... (${QGTUNNEL_URL})"
+
+curl -sL --retry 3 --max-time 60 "$QGTUNNEL_URL" --output "$QGTUNNEL_FILENAME"
+
+echo '    -> Installing qgtunnel...'
+
+tar xf "$QGTUNNEL_FILENAME" -C "$BUILD_DIR"
+
+echo '    DONE'

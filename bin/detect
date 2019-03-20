@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo qgtunnel
+exit 0
