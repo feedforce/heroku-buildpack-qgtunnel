@@ -15,7 +15,7 @@ Installs from official [qgtunnel binary](https://s3.amazonaws.com/quotaguard/qgt
 ## Configure from CLI
 
 ```
-$ heroku buildpacks:add https://github.com/feedforce/heroku-buildpack-qgtunnel.git
+$ heroku buildpacks:add https://github.com/masutaka/heroku-buildpack-qgtunnel.git
 ```
 
 ## Configure from app manifest
@@ -24,12 +24,8 @@ $ heroku buildpacks:add https://github.com/feedforce/heroku-buildpack-qgtunnel.g
 {
   "buildpacks": [
     {
-      "url": "https://github.com/feedforce/heroku-buildpack-qgtunnel.git"
+      "url": "https://github.com/masutaka/heroku-buildpack-qgtunnel.git"
     }
   ]
 }
 ```
-
-## License
-
-MIT © [Feedforce Inc.](https://github.com/feedforce)
